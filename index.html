@@ -11,14 +11,16 @@
 
 </head>
 
+
 <body>
+
 
     <div class="card text-center container col-lg-6 " style="display: show" id="quizStart">
         <div class="card-body">
             <h5 class="card-title">Coding Quiz Challenge</h5>
             <p class="card-text">Try to answer the following code-related questions within the time limit. Keep in mind
                 that incorrect answers with penalize your score/time by ten seconds!</p>
-            <a class="btn btn-primary text-light" id="startQuiz">Start Quiz</a>
+            <a class="btn btn-primary text-light" id="startBtn">Start Quiz</a>
         </div>
     </div>
 
@@ -89,7 +91,7 @@
             <p>Your final score is </p>
 
             <a>Enter your initials</a> <input class="form-control" id="initials">
-            <a class="btn btn-primary text-light" style="margin: 2px;">submit</a></br>
+            <a class="btn btn-primary text-light" style="margin: 2px;" id="submitInitials">submit</a></br>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
         <p class="text-secondary bg-light" style="display: none">Wrong!</p>
@@ -106,15 +108,15 @@
             <div class="scores text-secondary bg-light">
 
             </div>
-            <a class="btn btn-primary text-light" style="margin: 2px;">Retry Quiz</a>
-            <a class="btn btn-primary text-light" style="margin: 2px;">Clear Scores</a>
+            <a class="btn btn-primary text-light" style="margin: 2px;" id="retry">Retry Quiz</a>
+            <a class="btn btn-primary text-light" style="margin: 2px;" id="clearScores">Clear Scores</a>
 
         </div>
     </div>
 
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
