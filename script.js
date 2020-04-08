@@ -5,14 +5,22 @@ document.getElementById("startBtn").addEventListener('click', function () {
     document.getElementById("question1").setAttribute("style", "display: show");
 });
 
-document.getElementById("question1").addEventListener('click', function () {
+function wrong() {
+    console.log("butts")
+
+};
+
+//having trouble with this line i want to know which button i press i tried adding a div for just the buttons in the html. i believe i am just not using the dom correctly to get what i want
+document.getElementById("question1Btns").addEventListener('click', function () {
     document.getElementById("question1").setAttribute("style", "display: none");
     document.getElementById("question2").setAttribute("style", "display: show");
+
 });
 
 document.getElementById("question2").addEventListener('click', function () {
     document.getElementById("question2").setAttribute("style", "display: none");
     document.getElementById("question3").setAttribute("style", "display: show");
+
 });
 
 document.getElementById("question3").addEventListener('click', function () {
@@ -31,6 +39,8 @@ document.getElementById("question5").addEventListener('click', function () {
 });
 
 document.getElementById("submitInitials").addEventListener('click', function () {
+    console.log(document.getElementById("initials").value);
+    document.getElementById("initials").localStorage.setItem("Score", this.val());
     document.getElementById("quizOver").setAttribute("style", "display: none");
     document.getElementById("scores").setAttribute("style", "display: show");
 });
