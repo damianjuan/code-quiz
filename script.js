@@ -3,14 +3,15 @@
 document.getElementById("startBtn").addEventListener('click', function () {
     document.getElementById("quizStart").setAttribute("style", "display: none");
     document.getElementById("question1").setAttribute("style", "display: show");
+    document.getElementById("timer").setAttribute("style", "display: show");
 });
 
-function wrong() {
-    console.log("butts")
+document.getElementById("viewScores").addEventListener('click', function () {
+    document.getElementById("quizStart").setAttribute("style", "display: none");
+    document.getElementById("scores").setAttribute("style", "display: show");
 
-};
+});
 
-//having trouble with this line i want to know which button i press i tried adding a div for just the buttons in the html. i believe i am just not using the dom correctly to get what i want
 document.getElementById("question1Btns").addEventListener('click', function () {
     document.getElementById("question1").setAttribute("style", "display: none");
     document.getElementById("question2").setAttribute("style", "display: show");
@@ -36,11 +37,12 @@ document.getElementById("question4").addEventListener('click', function () {
 document.getElementById("question5").addEventListener('click', function () {
     document.getElementById("question5").setAttribute("style", "display: none");
     document.getElementById("quizOver").setAttribute("style", "display: show");
+    document.getElementById("timer").setAttribute("style", "display: none");
 });
 
 document.getElementById("submitInitials").addEventListener('click', function () {
     console.log(document.getElementById("initials").value);
-    document.getElementById("initials").localStorage.setItem("Score", this.val());
+    document.getElementById("initials");
     document.getElementById("quizOver").setAttribute("style", "display: none");
     document.getElementById("scores").setAttribute("style", "display: show");
 });
@@ -53,3 +55,11 @@ document.getElementById("retry").addEventListener('click', function () {
 document.getElementById("clearScores").addEventListener('click', function () {
     console.log("clear button pressed");
 });
+
+
+function wrong() {
+    console.log("wrong choice clicked");
+
+};
+
+
