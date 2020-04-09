@@ -7,6 +7,8 @@ var scoreList = document.getElementById("score-list")
 var users = [];
 var userScores = [];
 
+init();
+
 
 
 function renderScores() {
@@ -26,6 +28,24 @@ function renderScores() {
 
     };
 };
+
+function init() {
+
+
+    var storedScores = JSON.parse(localStorage.getItem("userScores"));
+    var storedUsers = JSON.parse(localStorage.getItem("users"));
+
+
+    if (storedScores !== null) {
+        userScores = storedScores;
+    }
+    if (storedUsers !== null) {
+        users = storedUsers;
+    }
+
+
+    renderScores();
+}
 
 
 function storeUserAndScore() {
