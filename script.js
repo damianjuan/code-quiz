@@ -59,7 +59,19 @@ document.getElementById("clearScores").addEventListener('click', function () {
 
 function wrong() {
     console.log("wrong choice clicked");
+    seconds -= 10;
+
 
 };
 
+var seconds = 60
+var interval = 1000
+function timer() {
+    setInterval(function () {
+        seconds--;
+        console.log(seconds);
+    }, interval);
+
+
+};
 
