@@ -1,13 +1,10 @@
 var end = false;
-
+var seconds = 60
 var userInput = document.querySelector("#initials");
 var scoreList = document.getElementById("score-list")
-
-
 var users = [];
 var userScores = [];
-
-init();
+var timeToDisplay = document.getElementById("timerDisplay");
 
 
 
@@ -126,6 +123,7 @@ document.getElementById("submitInitials").addEventListener('click', function () 
 document.getElementById("retry").addEventListener('click', function () {
     document.getElementById("scores").setAttribute("style", "display: none");
     document.getElementById("quizStart").setAttribute("style", "display: show");
+
 });
 
 document.getElementById("clearScores").addEventListener('click', function () {
@@ -140,9 +138,6 @@ function wrong() {
 
 };
 
-var seconds = 60
-
-
 function timer() {
     var interval = setInterval(function () {
         if (end === true) {
@@ -155,6 +150,16 @@ function timer() {
 };
 
 
-var timeToDisplay = document.getElementById("timerDisplay");
+function clearScores() {
+    localStorage.clear();
+    users = [];
+    userScores = [];
+    renderScores();
+
+};
+
+init();
+
+
 
 
