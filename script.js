@@ -123,7 +123,8 @@ document.getElementById("submitInitials").addEventListener('click', function () 
 document.getElementById("retry").addEventListener('click', function () {
     document.getElementById("scores").setAttribute("style", "display: none");
     document.getElementById("quizStart").setAttribute("style", "display: show");
-
+    end = false;
+    seconds = 60;
 });
 
 document.getElementById("clearScores").addEventListener('click', function () {
