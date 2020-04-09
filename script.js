@@ -38,6 +38,7 @@ document.getElementById("question5").addEventListener('click', function () {
     document.getElementById("question5").setAttribute("style", "display: none");
     document.getElementById("quizOver").setAttribute("style", "display: show");
     document.getElementById("timer").setAttribute("style", "display: none");
+    interval = 0;
 });
 
 document.getElementById("submitInitials").addEventListener('click', function () {
@@ -65,13 +66,16 @@ function wrong() {
 };
 
 var seconds = 60
-var interval = 1000
+var interval = 1000 // needed separate var for interval so can set to 0 when quiz is over to stop timer
+
 function timer() {
     setInterval(function () {
         seconds--;
         console.log(seconds);
+        timeToDisplay.textContent = seconds;
     }, interval);
-
-
 };
+
+var timeToDisplay = document.getElementById("timerDisplay");
+
 
