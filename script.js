@@ -1,6 +1,7 @@
 var end = false;
-var scoreList = document.querySelector(".score-list");
+
 var userInput = document.querySelector("#initials");
+var scoreList = document.getElementById("score-list")
 
 
 var users = [];
@@ -9,12 +10,20 @@ var userScores = [];
 
 
 function renderScores() {
-    for (var i = 0; i < users.length; i++) {
+    scoreList.innerHTML = "";
+
+    for (let i = 0; i < users.length; i++) {
         var user = users[i];
         var score = userScores[i];
+
         var li = document.createElement("li");
-        li.textContent = user;
-        scoreList.appendChild(li);
+        li.textContent = user + " " + score;
+        console.log(li);
+
+        document.getElementById("score-list").appendChild(li);
+
+
+
     };
 };
 
@@ -69,6 +78,7 @@ document.getElementById("question5Btns").addEventListener('click', function () {
 });
 
 document.getElementById("submitInitials").addEventListener('click', function () {
+    event.preventDefault();
     console.log(document.getElementById("initials").value);
     document.getElementById("initials");
     document.getElementById("quizOver").setAttribute("style", "display: none");
