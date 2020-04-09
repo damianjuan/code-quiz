@@ -52,10 +52,12 @@
     <div class="card container col-lg-6" style="display: none" id="question2">
         <div class="card-body">
             <h5 class="card-title">The condition in an if / else statement is enclosed within _______. </h5>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.quotes</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.curly brackets</a></br>
-            <a class="btn btn-primary text-light" style="margin: 2px;">3.parentheses</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">4.square brackets</a></br>
+            <div id="question2Btns">
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.quotes</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.curly brackets</a></br>
+                <a class="btn btn-primary text-light" style="margin: 2px;">3.parentheses</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">4.square brackets</a></br>
+            </div>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
         <p class="text-secondary bg-light wrongNotification" style="display: none">Wrong!</p>
@@ -66,10 +68,13 @@
     <div class="card container col-lg-6" style="display: none" id="question3">
         <div class="card-body">
             <h5 class="card-title">Arrays in JavaScript can be used to store _____.</h5>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.numbers and strings</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.other arrays</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">3.booleans</a></br>
-            <a class="btn btn-primary text-light" style="margin: 2px;">4.all of the above</a></br>
+            <div id="question3Btns">
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.numbers and
+                    strings</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.other arrays</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">3.booleans</a></br>
+                <a class="btn btn-primary text-light" style="margin: 2px;">4.all of the above</a></br>
+            </div>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
         <p class="text-secondary bg-light" style="display: none">Wrong!</p>
@@ -78,10 +83,12 @@
     <div class="card container col-lg-6" style="display: none" id="question4">
         <div class="card-body">
             <h5 class="card-title">String values must be enclosed within ____ when being assigned to variables.</h5>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.commas</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.curly brackets</a></br>
-            <a class="btn btn-primary text-light" style="margin: 2px;">3.quotes</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">4.parentheses</a></br>
+            <div id="question4Btns">
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.commas</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.curly brackets</a></br>
+                <a class="btn btn-primary text-light" style="margin: 2px;">3.quotes</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">4.parentheses</a></br>
+            </div>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
         <p class="text-secondary bg-light" style="display: none">Wrong!</p>
@@ -91,10 +98,12 @@
         <div class="card-body">
             <h5 class="card-title">A very useful tool used during development and debugging for printing content to the
                 debugger is:</h5>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.JavaScript</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.terminal/bash</a></br>
-            <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">3.for loops</a></br>
-            <a class="btn btn-primary text-light" style="margin: 2px;">4.console.log</a></br>
+            <div id="question5Btns">
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">1.JavaScript</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">2.terminal/bash</a></br>
+                <a class="btn btn-primary text-light" onclick="wrong()" style="margin: 2px;">3.for loops</a></br>
+                <a class="btn btn-primary text-light" style="margin: 2px;">4.console.log</a></br>
+            </div>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
         <p class="text-secondary bg-light" style="display: none">Wrong!</p>
@@ -105,7 +114,7 @@
             <h5 class="card-title">All Done!</h5>
             <p>Your final score is </p>
 
-            <a>Enter your initials</a> <input class="form-control" id="initials">
+            <a>Enter your initials</a> <input class="form-control" name=initials id="initials">
             <a class="btn btn-primary text-light" style="margin: 2px;" id="submitInitials">submit</a></br>
         </div>
         <p class="text-secondary bg-light" style="display: none">Correct!</p>
@@ -119,9 +128,8 @@
     <div class="card container col-lg-6" style="display: none" id="scores">
         <div class="card-body">
             <h5 class="card-title">Highscores</h5>
-
             <div class="scores text-secondary bg-light">
-
+                <ul id="score-list"></ul>
             </div>
             <a class="btn btn-primary text-light" style="margin: 2px;" id="retry">Retry Quiz</a>
             <a class="btn btn-primary text-light" style="margin: 2px;" id="clearScores">Clear Scores</a>
