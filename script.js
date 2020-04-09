@@ -1,3 +1,4 @@
+var end = false;
 
 //listen for click to start quiz
 document.getElementById("startBtn").addEventListener('click', function () {
@@ -38,7 +39,9 @@ document.getElementById("question5").addEventListener('click', function () {
     document.getElementById("question5").setAttribute("style", "display: none");
     document.getElementById("quizOver").setAttribute("style", "display: show");
     document.getElementById("timer").setAttribute("style", "display: none");
-    interval = 0;
+    end = true;
+    console.log("final score: ", seconds);
+
 });
 
 document.getElementById("submitInitials").addEventListener('click', function () {
@@ -66,15 +69,19 @@ function wrong() {
 };
 
 var seconds = 60
-var interval = 1000 // needed separate var for interval so can set to 0 when quiz is over to stop timer
+
 
 function timer() {
-    setInterval(function () {
+    var interval = setInterval(function () {
+        if (end === true) {
+            clearInterval(interval);
+        }
         seconds--;
         console.log(seconds);
         timeToDisplay.textContent = seconds;
-    }, interval);
+    }, 1000);
 };
+
 
 var timeToDisplay = document.getElementById("timerDisplay");
 
